@@ -1,0 +1,551 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: url(../IMG/soccer.png);
+  background-attachment: fixed;
+  background-size: auto 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grayline {
+  color: rgba(226, 226, 226, 0.671);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.iconmenu {
+  margin: 40px 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.iconmenu2 {
+  width: 50px;
+  margin: -130px 0px 0px 80%;
+  position: relative;
+  z-index: 0;
+}
+
+.iconmenu img {
+  vertical-align: top;
+  width: 35px;
+  cursor: pointer;
+}
+
+.contmenu {
+  background: #2ca50b;
+  background: linear-gradient(164deg, #2ca50b 28%, #38aa19 43%, #76c561 87%);
+  -webkit-box-shadow: 1px 0px 35px 10px #555454;
+          box-shadow: 1px 0px 35px 10px #555454;
+  width: 375px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  z-index: 9;
+}
+
+.contmenu ul {
+  padding: 25px 0px 20px 0px;
+  list-style: none;
+}
+
+.contmenu ul li {
+  color: azure;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.108);
+}
+
+.contmenu ul li:last-child {
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.108);
+}
+
+.contmenu ul li:hover {
+  background: #ffa703;
+  background: linear-gradient(144deg, rgba(255, 167, 3, 0.931) 63%, #d1a553 100%);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.ico {
+  width: 25px;
+  margin-right: 10px;
+  padding-bottom: 4px;
+}
+
+.icoactive {
+  width: 25px;
+  margin-right: 10px;
+  padding-bottom: 4px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.ico2 {
+  width: 50px;
+  margin-left: 40px;
+  -webkit-filter: invert(0%);
+          filter: invert(0%);
+  cursor: pointer;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+
+.ico2 .ico2:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.icono {
+  font-size: 1.8rem;
+  color: #e46d1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  align-content: center;
+  margin-bottom: -7px;
+  padding-top: -10px;
+  cursor: pointer;
+}
+
+.icono2 {
+  font-size: 1.8rem;
+  color: #e46d1e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  align-content: center;
+  margin-bottom: -7px;
+  padding-top: -10px;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+.active {
+  -webkit-transform: translate(-600px);
+          transform: translate(-600px);
+}
+
+.opacity {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.titleunderline {
+  margin-bottom: -0.5rem;
+  color: #3d3d3d;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 550;
+  line-height: 20px;
+  margin: 0 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cont-enlace {
+  width: 85%;
+  background-color: rgba(226, 226, 226, 0.671);
+  border: 1px solid rgba(238, 237, 237, 0.486);
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+
+.cont-enlace-nav {
+  background-color: rgba(226, 226, 226, 0.671);
+  border: 1px solid rgba(238, 237, 237, 0.486);
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.cont-enlace-nav {
+  background-color: rgba(238, 236, 236, 0.871);
+}
+
+.cont-enlace:hover {
+  background-color: rgba(238, 236, 236, 0.871);
+}
+
+.cont-enlace-lectura {
+  width: 85%;
+  background-color: #f3f1f1;
+  border: 1px solid rgba(238, 237, 237, 0.445);
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: #d1cdc9 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+          box-shadow: #d1cdc9 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  -webkit-transition: 0.5s ease 0s;
+  transition: 0.5s ease 0s;
+}
+
+.cont-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ol p {
+  margin-top: 0.5rem;
+}
+
+.moreInfo, .moreInfo2, .moreInfo3 {
+  background-color: rgba(255, 166, 0, 0.171);
+  border: 5px;
+  padding-top: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.gameInfo2 {
+  border: 5px;
+  padding-top: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.gameInfo1 {
+  border: 5px;
+  padding-top: 10px;
+  border-radius: 5px;
+  display: block;
+}
+
+.lessInfoshow {
+  display: none;
+}
+
+.moreInfoshow {
+  display: block;
+}
+
+.teams a {
+  text-decoration: none;
+  color: #e46d1e;
+  font-style: oblique;
+  font-weight: 550;
+}
+
+tbody tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.4em;
+}
+
+.trblack {
+  border-bottom: 1px solid rgba(226, 226, 226, 0.671);
+}
+
+tr th {
+  width: 100vw;
+  border-bottom: 2px solid rgba(226, 226, 226, 0.671);
+  background-color: #e46d1e;
+  text-align: end;
+}
+
+tr th p {
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #3d3d3d;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 5px 5px 5px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.contactginfo h4 {
+  font-weight: 600;
+  background-color: rgba(255, 166, 0, 0.116);
+}
+
+.maph2 {
+  font-weight: 550;
+  background-color: rgba(255, 166, 0, 0.116);
+}
+
+.formintro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.formintroshort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 55%;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border-bottom: 1px solid rgba(226, 226, 226, 0.671);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+fieldset legend {
+  font-weight: 550;
+}
+
+input {
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #f3f1f1;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+input:hover {
+  -webkit-box-shadow: #e46d1e 0px 0px 10px 0px, rgba(228, 109, 30, 0.801) 0px 0px 1px 0px;
+          box-shadow: #e46d1e 0px 0px 10px 0px, rgba(228, 109, 30, 0.801) 0px 0px 1px 0px;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+.Infomaps1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.Infomaps2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.map {
+  margin-bottom: 20px;
+}
+
+td a {
+  text-decoration: none;
+  color: #e46d1e;
+  font-weight: 500;
+}
+
+.rulesCol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.rulesT {
+  font-weight: bolder;
+}
+
+.formbt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.red {
+  -webkit-box-shadow: rgba(16, 16, 192, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(16, 16, 192, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 5px 50px 50px 5px;
+  padding: 5px;
+  border: 0.5px solid rgba(226, 226, 226, 0.671);
+  background-color: rgba(196, 43, 43, 0.829);
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.green {
+  -webkit-box-shadow: rgba(57, 192, 16, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(57, 192, 16, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 50px 5px 5px 50px;
+  padding: 5px;
+  border: 0.5px solid rgba(226, 226, 226, 0.671);
+  background-color: rgba(61, 196, 43, 0.829);
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 426px) {
+  .Infomaps1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .Infomaps2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 725px) {
+  .iconmenu2 {
+    width: 50px;
+    margin: -130px 0px 0px 90%;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .iconmenu2 {
+    width: 50px;
+    margin: -130px 0px 0px 95%;
+    position: relative;
+    z-index: 0;
+  }
+}
+
+.darkmode {
+  background-color: #020124;
+  color: white;
+}
+
+.darkmode .titleunderline {
+  color: white;
+}
+
+.darkmode .cont-enlace {
+  background-color: rgba(78, 76, 76, 0.719);
+  border: 1px solid rgba(0, 0, 0, 0.145);
+}
+
+.darkmode .cont-enlace-nav {
+  background-color: rgba(78, 76, 76, 0.719);
+  border: 1px solid rgba(0, 0, 0, 0.145);
+}
+
+.darkmode .cont-enlace-lectura {
+  background-color: #242323;
+  -webkit-box-shadow: #19191a 3px 3px 6px 0px inset, rgba(54, 54, 54, 0.5) -3px -3px 6px 1px inset;
+          box-shadow: #19191a 3px 3px 6px 0px inset, rgba(54, 54, 54, 0.5) -3px -3px 6px 1px inset;
+}
+
+.darkmode .cont-enlace:hover {
+  background-color: rgba(59, 58, 58, 0.859);
+}
+
+.darkmode .cont-enlace-.cont-enlace-nav {
+  background-color: rgba(59, 58, 58, 0.859);
+}
+
+.darkmode .contmenu {
+  background: #2ca50b;
+  background: linear-gradient(164deg, #2ca50b 28%, #2f8f15 43%, #62a350 87%, #729469 100%);
+}
+
+.darkmode .contmenu ul li:hover {
+  background: #e49502;
+  background: linear-gradient(144deg, rgba(255, 167, 3, 0.931) 63%, #a58241 100%);
+}
+
+.darkmode .ico2 {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.darkmode .grayline {
+  color: #c3c2c2;
+}
+
+.darkmode .contactgif {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.darkmode .red, .darkmode .green {
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

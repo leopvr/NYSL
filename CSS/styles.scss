@@ -1,0 +1,471 @@
+$gray: rgba(226, 226, 226, 0.671);
+$graylectura: rgb(243, 241, 241);
+$lectura: rgb(61, 61, 61);
+
+$orange: rgb(228, 109, 30);
+$orangelight: rgba(228, 109, 30, 0.801);
+
+$box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+$box-shadow-about: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+$box-shadow-lectura: rgb(209, 205, 201) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+
+$filter: invert(100%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../IMG/soccer.png);
+    background-attachment: fixed;
+    background-size: auto 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grayline{
+    color: rgba(226, 226, 226, 0.671);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.iconmenu{
+    margin: 40px 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.iconmenu2{
+    width: 50px;
+    margin: -130px 0px 0px 80%;
+    position: relative;
+    z-index: 0;
+}
+
+.iconmenu img{
+    vertical-align: top;
+    width: 35px;
+    cursor: pointer;
+}
+
+.contmenu{
+    background: rgb(44,165,11);
+    background: linear-gradient(164deg, rgba(44,165,11,1) 28%, rgba(56,170,25,1) 43%, rgba(118,197,97,1) 87%);
+    box-shadow: 1px 0px 35px 10px rgb(85, 84, 84);
+    width: 375px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .6s ease;
+    z-index: 9;
+    & ul{
+        padding: 25px 0px 20px 0px;
+        list-style: none;
+        & li{
+            color: azure;
+            display: block;
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            border-top: 0.5px solid rgba(255, 255, 255, 0.108);
+        }
+        & li:last-child{
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.108); 
+        }
+
+        & li:hover{
+            background: rgb(255,167,3);
+            background: linear-gradient(144deg, rgba(255, 167, 3, 0.931) 63%, rgb(209, 165, 83) 100%);
+            // box-shadow: $box-shadow;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+    }
+}
+
+.ico{
+    width: 25px; 
+    margin-right: 10px; 
+    padding-bottom: 4px;
+}
+
+.icoactive{
+    width: 25px; 
+    margin-right: 10px; 
+    padding-bottom: 4px;
+    filter: $filter; 
+}
+
+.ico2{
+    width: 50px;
+    margin-left: 40px;
+    filter: invert(0%);
+    cursor: pointer;
+    transition: 0.5s ease 0s;
+    & .ico2:hover{
+        box-shadow: $box-shadow;
+    }
+}
+
+.icono{
+    font-size: 1.8rem;
+    color: $orange;
+    display: flex;
+    align-content: center;
+    align-content: center;
+    margin-bottom: -7px;
+    padding-top: -10px;
+    cursor: pointer;
+}
+
+.icono2{
+    font-size: 1.8rem;
+    color: $orange;
+    display: flex;
+    align-content: center;
+    align-content: center;
+    margin-bottom: -7px;
+    padding-top: -10px;
+    cursor: pointer;
+    margin-top: -6px;
+}
+
+.active{
+    transform: translate(-600px);
+}
+
+.opacity{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5s ease;
+}
+
+.titleunderline{
+    margin-bottom: -0.5rem;
+    color: rgb(61, 61, 61); 
+    font-family: 'Open Sans Condensed', sans-serif; 
+    font-size: 24px; 
+    font-weight: 550; 
+    line-height: 20px; 
+    margin: 0 0 0; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+.cont-enlace{
+    width: 85%;
+    background-color: $gray;
+    border: 1px solid rgba(238, 237, 237, 0.486);
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    transition: 0.5s ease 0s;
+}
+
+.cont-enlace-nav{
+    background-color: $gray;
+    border: 1px solid rgba(238, 237, 237, 0.486);
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    transition: 0.5s ease 0s;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.cont-enlace-nav{
+    background-color: rgba(238, 236, 236, 0.871);
+}
+
+.cont-enlace:hover{
+    background-color: rgba(238, 236, 236, 0.871);
+}
+
+.cont-enlace-lectura{
+    width: 85%;
+    background-color: $graylectura;
+    border: 1px solid rgba(238, 237, 237, 0.445);
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: $box-shadow-lectura;
+    transition: 0.5s ease 0s;
+}
+
+.cont-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ol p {
+    margin-top: 0.5rem;
+}
+
+.moreInfo, .moreInfo2, .moreInfo3{
+    background-color: rgba(255, 166, 0, 0.171);
+    border: 5px;
+    padding-top: 10px;
+    border-radius: 5px;
+    display: none;
+    // transition: 1s ease 0s;
+}
+
+.gameInfo2{
+    border: 5px;
+    padding-top: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.gameInfo1{
+    border: 5px;
+    padding-top: 10px;
+    border-radius: 5px;
+    display: block;
+}
+
+.lessInfoshow{
+    display: none;
+}
+
+.moreInfoshow{
+    display: block;
+}
+
+.teams a{
+    text-decoration: none;
+    color: $orange;
+    font-style: oblique;
+    font-weight: 550;
+}
+
+
+tbody tr{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.4em;
+    // & td{}
+}
+
+.trblack {
+    border-bottom: 1px solid $gray;
+}
+
+tr th{
+    width: 100vw;
+    border-bottom: 2px solid $gray;
+    background-color: $orange;
+    text-align: end;
+    & p{
+        margin-top: 10px;
+        margin-right: 10px;
+        color: $lectura; 
+        font-family: 'Open Sans Condensed', sans-serif; 
+        font-size: 20px; 
+        font-weight: 500; 
+        line-height: 20px; 
+        margin: 5px 5px 5px; 
+        text-align: right; 
+        text-transform: uppercase;
+    }
+}
+
+.contactginfo h4{
+    font-weight: 600;
+    background-color: rgba(255, 166, 0, 0.116);
+}
+
+.maph2{
+    font-weight: 550;
+    background-color: rgba(255, 166, 0, 0.116);
+}
+
+.formintro{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.formintroshort{
+   display: flex; 
+   flex-direction: column; 
+   width: 55%;
+   margin-bottom: 10px;
+}
+
+fieldset{
+    border-bottom: 1px solid $gray;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+fieldset legend {
+    font-weight: 550;
+}
+
+input{
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid $graylectura;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+input:hover{
+    box-shadow: $orange 0px 0px 10px 0px, $orangelight 0px 0px 1px 0px;
+}
+
+table{
+    margin-bottom: 20px
+}
+
+.Infomaps1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Infomaps2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.map{
+    margin-bottom: 20px;
+}
+
+td a{
+    text-decoration: none;
+    color: #e46d1e;
+    font-weight: 500;
+}
+
+.rulesCol{
+    display: flex;
+    flex-direction: column;
+}
+
+.rulesT {
+    font-weight: bolder;
+}
+
+.formbt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.red{
+    box-shadow: rgba(16, 16, 192, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
+    border-radius: 5px 50px 50px 5px;
+    padding: 5px;
+    border: 0.5px solid $gray;
+    background-color: rgba(196, 43, 43, 0.829);
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.green{
+    box-shadow: rgba(57, 192, 16, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
+    border-radius: 50px 5px 5px 50px;
+    padding: 5px;
+    border: 0.5px solid $gray;
+    background-color: rgba(61, 196, 43, 0.829);
+    font-weight: 500;
+    margin-top: 20px;
+}
+//////////////////////////////////////////////medias
+@media screen and (min-width: 426px) {
+    .Infomaps1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Infomaps2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 725px) {
+    .iconmenu2{
+        width: 50px;
+        margin: -130px 0px 0px 90%;
+        position: relative;
+        z-index: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .iconmenu2{
+        width: 50px;
+        margin: -130px 0px 0px 95%;
+        position: relative;
+        z-index: 0;
+    }
+}
+
+// @media screen and (min-width: 1450px) {
+//     .cont-main{
+//         width: 60%;
+//     }
+// }
+
+
+//////////////////////////////////////////////darkmode
+.darkmode {
+    background-color: rgb(2, 1, 36);
+    color: white;
+    & .titleunderline {
+        color: white;
+    }
+    & .cont-enlace {
+        background-color: rgba(78, 76, 76, 0.719);
+        border: 1px solid rgba(0, 0, 0, 0.145);
+    }
+    & .cont-enlace-nav {
+        background-color: rgba(78, 76, 76, 0.719);
+        border: 1px solid rgba(0, 0, 0, 0.145);
+    }
+    & .cont-enlace-lectura {
+        background-color: rgb(36, 35, 35);
+        box-shadow: rgb(25, 25, 26) 3px 3px 6px 0px inset, rgba(54, 54, 54, 0.5) -3px -3px 6px 1px inset;;
+    }
+    & .cont-enlace:hover {
+        background-color: rgba(59, 58, 58, 0.859);
+    }
+    & .cont-enlace-.cont-enlace-nav {
+        background-color: rgba(59, 58, 58, 0.859);
+    }
+    & .contmenu {
+        background: rgb(44,165,11);
+        background: linear-gradient(164deg, rgba(44,165,11,1) 28%, rgb(47, 143, 21) 43%, rgb(98, 163, 80) 87%, rgb(114, 148, 105) 100%);
+    }
+    & .contmenu ul li:hover{
+        background: rgb(228, 149, 2);
+        background: linear-gradient(144deg, rgba(255, 167, 3, 0.931) 63%, rgb(165, 130, 65) 100%);
+    }
+    & .ico2 {
+        filter: invert(100%);
+    }
+    & .grayline {
+        color: rgb(195, 194, 194)
+    }
+    & .contactgif {
+        filter: invert(100%);
+    }
+    & .red, .green {
+        color: white;
+    }
+}
