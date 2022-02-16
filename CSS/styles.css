@@ -187,9 +187,10 @@ body {
   transition: 0.5s ease 0s;
   margin-left: 50px;
   margin-right: 50px;
+  height: 450px;
 }
 
-.cont-enlace-nav {
+.cont-enlace-nav:hover {
   background-color: rgba(238, 236, 236, 0.871);
 }
 
@@ -205,8 +206,8 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
-  -webkit-box-shadow: #d1cdc9 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-          box-shadow: #d1cdc9 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   -webkit-transition: 0.5s ease 0s;
   transition: 0.5s ease 0s;
 }
@@ -362,6 +363,10 @@ table {
   margin-bottom: 20px;
 }
 
+.tablesubmit {
+  max-width: 400px;
+}
+
 .Infomaps1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,6 +444,14 @@ td a {
   background-color: rgba(61, 196, 43, 0.829);
   font-weight: 500;
   margin-top: 20px;
+}
+
+.txtup {
+  color: black;
+}
+
+.icoup {
+  width: 20px;
 }
 
 @media screen and (min-width: 426px) {
@@ -546,6 +559,15 @@ td a {
 }
 
 .darkmode .red, .darkmode .green {
+  color: white;
+}
+
+.darkmode .icoup {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.darkmode .txtup {
   color: white;
 }
 /*# sourceMappingURL=styles.css.map */
