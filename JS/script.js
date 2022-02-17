@@ -7,10 +7,10 @@ iconMenu.addEventListener('click', (e) => {
 
     const rutaAct = e.target.getAttribute('src');
 
-    if (rutaAct == '../IMG/open-menu.png') {
-        e.target.setAttribute('src', '../IMG/close-menu2.png');
+    if (rutaAct == './img/open-menu.png') {
+        e.target.setAttribute('src', './img/close-menu2.png');
     } else {
-        e.target.setAttribute('src', '../IMG/open-menu.png')
+        e.target.setAttribute('src', './img/open-menu.png')
     }
 });
 
