@@ -56,6 +56,7 @@ body{
     width: 375px;
     height: 100vh;
     position: absolute;
+    overflow: scroll;
     top: 0;
     left: 0;
     transition: all .6s ease;
@@ -396,6 +397,9 @@ td a{
     width: 20px; 
 }
 //////////////////////////////////////////////medias
+
+/////Vertical
+
 @media screen and (min-width: 426px) {
     .Infomaps1{
         display: flex;
@@ -427,13 +431,22 @@ td a{
         position: relative;
         z-index: 0;
     }
+    body {
+        background-size: 100vw 120vh;
+    }
 }
 
-// @media screen and (min-width: 1450px) {
-//     .cont-main{
-//         width: 60%;
-//     }
-// }
+/////Horizontal
+
+@media screen and (max-height: 425px) {
+    body {
+        background-size: 100vw 120vh;
+    }
+    .contmenu ul {
+        text-align: center;
+    }
+    
+}
 
 
 //////////////////////////////////////////////darkmode

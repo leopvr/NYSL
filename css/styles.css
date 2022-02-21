@@ -45,6 +45,7 @@ body {
   width: 375px;
   height: 100vh;
   position: absolute;
+  overflow: scroll;
   top: 0;
   left: 0;
   -webkit-transition: all .6s ease;
@@ -497,6 +498,18 @@ td a {
     margin: -130px 0px 0px 95%;
     position: relative;
     z-index: 0;
+  }
+  body {
+    background-size: 100vw 120vh;
+  }
+}
+
+@media screen and (max-height: 425px) {
+  body {
+    background-size: 100vw 120vh;
+  }
+  .contmenu ul {
+    text-align: center;
   }
 }
 
