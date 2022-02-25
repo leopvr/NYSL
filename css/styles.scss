@@ -225,14 +225,20 @@ ol p {
     border: 5px;
     padding-top: 10px;
     border-radius: 5px;
-    display: none;
+    width: 100%;
+    // display: none;
 }
 
 .gameInfo1{
     border: 5px;
     padding-top: 10px;
     border-radius: 5px;
-    display: block;
+    width: 100%;
+    // display: block;
+}
+
+thead tr{
+    text-align: center;
 }
 
 .lessInfoshow{
@@ -255,7 +261,9 @@ tbody tr{
     display: flex;
     justify-content: space-between;
     margin-top: 0.4em;
-    // & td{}
+    text-align: center;
+    align-items: center;
+    border-bottom: 1px solid $gray;
 }
 
 .trblack {
@@ -263,10 +271,14 @@ tbody tr{
 }
 
 tr th{
-    width: 100vw;
+    width: 100%;
     border-bottom: 2px solid $gray;
-    background-color: $orange;
-    text-align: end;
+    background-color: #ff8d00;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     & p{
         margin-top: 10px;
         margin-right: 10px;
@@ -276,7 +288,7 @@ tr th{
         font-weight: 500; 
         line-height: 20px; 
         margin: 5px 5px 5px; 
-        text-align: right; 
+        text-align: center; 
         text-transform: uppercase;
     }
 }
@@ -396,11 +408,71 @@ td a{
 .icoup{
     width: 20px; 
 }
+
+.screenH {
+    // background-color: white;
+    & li{
+    border: 1px solid $gray;
+    padding-left: 0px;
+        & :hover{
+            background-color: whitesmoke;
+        }
+    }
+    & p {
+        margin-bottom: 0px;
+    }
+    & ul {
+        display: flex;
+        flex-direction: column;
+        & button {
+            border: none;
+            width: 100%;
+            & :hover {
+                background-color: #ff8d00;
+            }
+        }
+        
+    }
+}
+
+.infoT {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    text-align: center;
+}
+
+.Imap{
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.collapse{
+    display: none;
+}
+
+.acomodo{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul button{ 
+    border: 1px solid $gray;
+}
+
+ul button:hover{
+    background-color: #ff8d00;
+}
+
+.vvv{
+    background-color: #ff8d00;
+}
+
 //////////////////////////////////////////////medias
 
-/////Vertical
 
-@media screen and (min-width: 426px) {
+@media (orientation: portrait) {
     .Infomaps1{
         display: flex;
         flex-direction: row;
@@ -413,14 +485,58 @@ td a{
         justify-content: space-around;
         flex-wrap: wrap;
     }
+    .screenH{
+        display: none;
+    }
 }
 
-@media screen and (min-width: 725px) {
+@media (orientation: landscape) {
     .iconmenu2{
         width: 50px;
         margin: -130px 0px 0px 90%;
         position: relative;
         z-index: 0;
+    }
+    .screenH{
+        // display: block;
+        & li {
+            list-style: none;
+            // margin-top: 1em;
+            // margin-bottom: 1em;
+            padding-left: 0px;
+            border-radius: 5px;
+            & :hover{
+                background-color: #e46d1e;
+                cursor: pointer;
+            }
+        }
+        & ul {
+            padding-left: 0px;
+        }
+    }
+    body {
+        background-size: 100vw 140vh;
+    }
+    .contmenu ul {
+        text-align: center;
+    }
+    thead {
+        & .h3 {
+            background-color: #ff8d00; 
+            border-radius: 5px; 
+            margin-top: 5px; 
+            margin-bottom: 5px;
+        }
+    }
+    tbody {
+        & tr {
+            display: none;
+        }
+    }
+    .Infomaps1, .Infomaps2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
@@ -432,22 +548,9 @@ td a{
         z-index: 0;
     }
     body {
-        background-size: 100vw 120vh;
+        background-size: 100vw 140vh;
     }
 }
-
-/////Horizontal
-
-@media screen and (max-height: 425px) {
-    body {
-        background-size: 100vw 120vh;
-    }
-    .contmenu ul {
-        text-align: center;
-    }
-    
-}
-
 
 //////////////////////////////////////////////darkmode
 .darkmode {

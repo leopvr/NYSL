@@ -244,14 +244,18 @@ ol p {
   border: 5px;
   padding-top: 10px;
   border-radius: 5px;
-  display: none;
+  width: 100%;
 }
 
 .gameInfo1 {
   border: 5px;
   padding-top: 10px;
   border-radius: 5px;
-  display: block;
+  width: 100%;
+}
+
+thead tr {
+  text-align: center;
 }
 
 .lessInfoshow {
@@ -277,6 +281,11 @@ tbody tr {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 0.4em;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgba(226, 226, 226, 0.671);
 }
 
 .trblack {
@@ -284,10 +293,20 @@ tbody tr {
 }
 
 tr th {
-  width: 100vw;
+  width: 100%;
   border-bottom: 2px solid rgba(226, 226, 226, 0.671);
-  background-color: #e46d1e;
-  text-align: end;
+  background-color: #ff8d00;
+  text-align: center;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 tr th p {
@@ -299,7 +318,7 @@ tr th p {
   font-weight: 500;
   line-height: 20px;
   margin: 5px 5px 5px;
-  text-align: right;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -454,7 +473,83 @@ td a {
   width: 20px;
 }
 
-@media screen and (min-width: 426px) {
+.screenH li {
+  border: 1px solid rgba(226, 226, 226, 0.671);
+  padding-left: 0px;
+}
+
+.screenH li :hover {
+  background-color: whitesmoke;
+}
+
+.screenH p {
+  margin-bottom: 0px;
+}
+
+.screenH ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.screenH ul button {
+  border: none;
+  width: 100%;
+}
+
+.screenH ul button :hover {
+  background-color: #ff8d00;
+}
+
+.infoT {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.Imap {
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+          box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+
+.collapse {
+  display: none;
+}
+
+.acomodo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+ul button {
+  border: 1px solid rgba(226, 226, 226, 0.671);
+}
+
+ul button:hover {
+  background-color: #ff8d00;
+}
+
+.vvv {
+  background-color: #ff8d00;
+}
+
+@media (orientation: portrait) {
   .Infomaps1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -481,14 +576,55 @@ td a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  .screenH {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 725px) {
+@media (orientation: landscape) {
   .iconmenu2 {
     width: 50px;
     margin: -130px 0px 0px 90%;
     position: relative;
     z-index: 0;
+  }
+  .screenH li {
+    list-style: none;
+    padding-left: 0px;
+    border-radius: 5px;
+  }
+  .screenH li :hover {
+    background-color: #e46d1e;
+    cursor: pointer;
+  }
+  .screenH ul {
+    padding-left: 0px;
+  }
+  body {
+    background-size: 100vw 140vh;
+  }
+  .contmenu ul {
+    text-align: center;
+  }
+  thead .h3 {
+    background-color: #ff8d00;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  tbody tr {
+    display: none;
+  }
+  .Infomaps1, .Infomaps2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
@@ -500,16 +636,7 @@ td a {
     z-index: 0;
   }
   body {
-    background-size: 100vw 120vh;
-  }
-}
-
-@media screen and (max-height: 425px) {
-  body {
-    background-size: 100vw 120vh;
-  }
-  .contmenu ul {
-    text-align: center;
+    background-size: 100vw 140vh;
   }
 }
 
