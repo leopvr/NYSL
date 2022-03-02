@@ -54,7 +54,7 @@ function horScreen(p1) {
          
 
               if (seleccionado > -1) {
-                seleccionado.style.backgroundColor = "red";
+                // seleccionado.style.backgroundColor = "red";
 
                 console.log(`position index: ${seleccionado}`);
 
