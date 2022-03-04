@@ -44,25 +44,73 @@ function horScreen(p1) {
                 ilH.innerHTML = `${element.vsName}`
 
                 document.getElementById("ulH").appendChild(ilH);
-                
+
             })
 
-            document.getElementById('ulH').addEventListener("click", function(e){
+            let ulH = document.createElement("div");
+            ulH.innerHTML = `<div class="infoT">
+                    <div class="d-flex flex-column justify-content-center">
+                        <p>Day:</p>
+                        <p style="color: orange;">${data[0].games[1].day}</p>
+                    </div>
+                    <div>
+                        <p>Times:</p>
+                        <p style="color: orange;">${data[0].games[1].times}</p>
+                    </div>
+                    <div>
+                        <p>Location:</p>
+                        <p style="color: orange;">${data[0].games[1].location.name}</p>
+                    </div>
+                </div>
+    
+                <div class="d-flex justify-content-center">
+                    <iframe class="Imap" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"
+                        src="${data[0].games[1].location.Iframe}">
+                    </iframe>
+                </div>`
+            document.getElementById('infoH').appendChild(ulH);
+            ulH.classList.add('acomodo');
+
+            let ulH2 = document.createElement("div");
+            ulH2.innerHTML = `<div class="infoT">
+                    <div class="d-flex flex-column justify-content-center">
+                        <p>Day:</p>
+                        <p style="color: orange;">${data[1].games[1].day}</p>
+                    </div>
+                    <div>
+                        <p>Times:</p>
+                        <p style="color: orange;">${data[1].games[1].times}</p>
+                    </div>
+                    <div>
+                        <p>Location:</p>
+                        <p style="color: orange;">${data[1].games[1].location.name}</p>
+                    </div>
+                </div>
+    
+                <div class="d-flex justify-content-center">
+                    <iframe class="Imap" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;"
+                        src="${data[1].games[1].location.Iframe}">
+                    </iframe>
+                </div>`
+            document.getElementById('infoH2').appendChild(ulH2);
+            ulH.classList.add('acomodo');
+
+            document.getElementById('ulH').addEventListener("click", function (e) {
                 const seleccionado = [...this.children]
-                .filter(el => el.className.indexOf('bar') > -1)
-                .indexOf(e.target);
-         
+                    .filter(el => el.className.indexOf('bar') > -1)
+                    .indexOf(e.target);
 
-              if (seleccionado > -1) {
-                // seleccionado.style.backgroundColor = "red";
 
-                console.log(`position index: ${seleccionado}`);
+                if (seleccionado > -1) {
+                    // seleccionado.style.backgroundColor = "red";
 
-                document.getElementById('infoH').innerHTML = ' ';
+                    console.log(`position index: ${seleccionado}`);
 
-                function createInfo(s) {
-                    let ulH = document.createElement("div");              
-                    ulH.innerHTML = `<div class="infoT">
+                    document.getElementById('infoH').innerHTML = ' ';
+
+                    function createInfo(s) {
+                        let ulH = document.createElement("div");
+                        ulH.innerHTML = `<div class="infoT">
                     <div class="d-flex flex-column justify-content-center">
                         <p>Day:</p>
                         <p style="color: orange;">${data[0].games[s].day}</p>
@@ -82,16 +130,16 @@ function horScreen(p1) {
                         src="${data[0].games[s].location.Iframe}">
                     </iframe>
                 </div>`
-                    document.getElementById('infoH').appendChild(ulH);
-                    ulH.classList.add('acomodo');
+                        document.getElementById('infoH').appendChild(ulH);
+                        ulH.classList.add('acomodo');
+                    }
+                    createInfo(seleccionado);
+
+                } else {
+
+                    console.log("Nada");
+
                 }
-                createInfo(seleccionado);
-
-              } else {
-
-                  console.log("Nada");
-
-              }
             });
 
             data[1].games.forEach(function (element) {
@@ -102,24 +150,24 @@ function horScreen(p1) {
                 ilH.innerHTML = `${element.vsName}`
 
                 document.getElementById("ulH2").appendChild(ilH);
-                
+
             })
 
-            document.getElementById('ulH2').addEventListener("click", function(e){
+            document.getElementById('ulH2').addEventListener("click", function (e) {
                 const seleccionado = [...this.children]
-                .filter(el => el.className.indexOf('bar') > -1)
-                .indexOf(e.target);
-         
+                    .filter(el => el.className.indexOf('bar') > -1)
+                    .indexOf(e.target);
 
-              if (seleccionado > -1) {
 
-                console.log(`position index: ${seleccionado}`);
+                if (seleccionado > -1) {
 
-                document.getElementById('infoH2').innerHTML = ' ';
+                    console.log(`position index: ${seleccionado}`);
 
-                function createInfo(s) {
-                    let ulH = document.createElement("div");              
-                    ulH.innerHTML = `<div class="infoT">
+                    document.getElementById('infoH2').innerHTML = ' ';
+
+                    function createInfo(s) {
+                        let ulH = document.createElement("div");
+                        ulH.innerHTML = `<div class="infoT">
                     <div class="d-flex flex-column justify-content-center">
                         <p>Day:</p>
                         <p style="color: orange;">${data[1].games[s].day}</p>
@@ -139,16 +187,16 @@ function horScreen(p1) {
                         src="${data[1].games[s].location.Iframe}">
                     </iframe>
                 </div>`
-                    document.getElementById('infoH2').appendChild(ulH);
-                    ulH.classList.add('acomodo');
+                        document.getElementById('infoH2').appendChild(ulH);
+                        ulH.classList.add('acomodo');
+                    }
+                    createInfo(seleccionado);
+
+                } else {
+
+                    console.log("Nada");
+
                 }
-                createInfo(seleccionado);
-
-              } else {
-
-                  console.log("Nada");
-
-              }
             });
 
         }
@@ -199,8 +247,6 @@ function store(value) {
     localStorage.setItem('darkmode', value)
 }
 
-
-
 function moreInfo() {
     var plus = document.querySelector('.moreInfo');
     plus.classList.toggle("moreInfoshow")
@@ -217,12 +263,13 @@ function moreInfo3() {
     plus.classList.toggle("moreInfoshow")
 }
 
-// function gameInfo1() {
-//     var plus = document.querySelector('.gameInfo1');
-//     plus.classList.toggle("lessInfoshow")
-// }
-
-// function gameInfo2() {
-//     var plus = document.querySelector('.gameInfo2');
-//     plus.classList.toggle("moreInfoshow")
-// }
+var cargarPagina = (id) => {
+    document.getElementById("homePage").style.display = "none"
+    document.getElementById("aboutPage").style.display = "none"
+    document.getElementById("formPage").style.display = "none"
+    document.getElementById("infoPage").style.display = "none"
+    document.getElementById("rulesPage").style.display = "none"
+    document.getElementById("contactPage").style.display = "none"
+    document.getElementById(id).style.display = "block"
+}
+cargarPagina("homePage")
