@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "nysl-beaf1"
-  }
+    "default": "nysl-beaf1",
+    "Leo": "nysl-beaf1"
+  },
+  "targets": {}
 }

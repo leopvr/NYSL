@@ -270,6 +270,9 @@ var cargarPagina = (id) => {
     document.getElementById("infoPage").style.display = "none"
     document.getElementById("rulesPage").style.display = "none"
     document.getElementById("contactPage").style.display = "none"
+    document.getElementById("loginPage").style.display = "none"
     document.getElementById(id).style.display = "block"
 }
-cargarPagina("homePage")
+cargarPagina("loginPage")
+
+
