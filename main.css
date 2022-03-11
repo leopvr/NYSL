@@ -30,11 +30,14 @@ a {
 .mdl-card {
     display: block;
 }
+
+
 h3 {
     background: url('./img/nysl_logo.png') no-repeat;
     background-size: 40px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     background-position-y: -2px;
+    text-align: center;
 }
 .mdl-textfield {
     width: 100%;
@@ -62,7 +65,7 @@ h3 {
 
 /* Header */
 
-.logo {
+/* .logo {
     font-family: 'Amaranth', sans-serif;
 }
 .logo .material-icons {
@@ -70,7 +73,7 @@ h3 {
     font-size: 32px;
     margin-right: -2px;
     position: relative;
-}
+} */
 .header .mdl-layout__header-row {
     max-width: 1024px;
     width: 100%;
@@ -125,7 +128,19 @@ h3 {
 #sign-in-button {
     margin-left: 10px;
     color: inherit;
+    margin-top: 20px;
+    background-color: #FFCA28;
+    border-radius: 30px;
 }
+
+#sign-in-button-FB {
+    margin-left: 10px;
+    color: inherit;
+    margin-top: 20px;
+    background-color: rgb(69, 69, 204);
+    border-radius: 30px;
+}
+
 #sign-out-button {
     margin: 10px;
     color: inherit;
@@ -315,4 +330,20 @@ h3 {
     align-items: center;
     color: white;
     flex-direction: column;
+}
+
+
+.popUpSig{
+    width: 60%;
+    height: 70%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#usernameNYSL{
+    width: 250px;
+}
+
+#passwordNYSL{
+    width: 250px;
 }
