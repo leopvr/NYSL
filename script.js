@@ -271,9 +271,10 @@ var cargarPagina = (id) => {
     document.getElementById("rulesPage").style.display = "none"
     document.getElementById("contactPage").style.display = "none"
     document.getElementById("loginPage").style.display = "none"
+    document.getElementById("regiuserPage").style.display = "none"
     document.getElementById(id).style.display = "block"
 }
-cargarPagina("loginPage")
+cargarPagina("homePage")
 
 
 /**
@@ -300,6 +301,9 @@ cargarPagina("loginPage")
  var titleInput = document.getElementById('new-post-title');
  var signInButton = document.getElementById('sign-in-button');
  var signInButtonFB = document.getElementById('sign-in-button-FB');
+ var signInButtonMAIL = document.getElementById('sign-in-button-MAIL');
+ var email = document.getElementById('usernameNYSL');
+ var password = document.getElementById('passwordNYSL');
  var signOutButton = document.getElementById('sign-out-button');
  var splashPage = document.getElementById('page-splash');
  var addPost = document.getElementById('add-post');
@@ -368,7 +372,7 @@ cargarPagina("loginPage")
        '<div class="post post-' + postId + ' mdl-cell mdl-cell--12-col ' +
                    'mdl-cell--6-col-tablet mdl-cell--4-col-desktop mdl-grid mdl-grid--no-spacing">' +
          '<div class="mdl-card mdl-shadow--2dp">' +
-           '<div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">' +
+           '<div class="mdl-card__title mdl-color--light-green-600 mdl-color-text--white">' +
              '<h4 class="mdl-card__title-text"></h4>' +
            '</div>' +
            '<div class="header">' +
@@ -412,6 +416,8 @@ cargarPagina("loginPage")
    postElement.getElementsByClassName('username')[0].innerText = author || 'Anonymous';
    postElement.getElementsByClassName('avatar')[0].style.backgroundImage = 'url("' +
        (authorPic || './silhouette.jpg') + '")';
+  //  postElement.getElementsByClassName('material-icons')[0].style.backgroundImage = 'url("' +
+  //  (authorPic || './silhouette.jpg') + '")';
  
    // Listen for comments.
    var commentsRef = firebase.database().ref('post-comments/' + postId);
@@ -560,7 +566,7 @@ cargarPagina("loginPage")
    };
  
    // Fetching and displaying all posts of each sections.
-   fetchPosts(topUserPostsRef, topUserPostsSection);
+  //  fetchPosts(topUserPostsRef, topUserPostsSection);
    fetchPosts(recentPostsRef, recentPostsSection);
    fetchPosts(userPostsRef, userPostsSection);
  
@@ -586,7 +592,7 @@ cargarPagina("loginPage")
   */
  function cleanupUi() {
    // Remove all previously displayed posts.
-   topUserPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
+  //  topUserPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
    recentPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
    userPostsSection.getElementsByClassName('posts-container')[0].innerHTML = '';
  
@@ -645,11 +651,11 @@ cargarPagina("loginPage")
  function showSection(sectionElement, buttonElement) {
    recentPostsSection.style.display = 'none';
    userPostsSection.style.display = 'none';
-   topUserPostsSection.style.display = 'none';
+  //  topUserPostsSection.style.display = 'none';
    addPost.style.display = 'none';
    recentMenuButton.classList.remove('is-active');
    myPostsMenuButton.classList.remove('is-active');
-   myTopPostsMenuButton.classList.remove('is-active');
+  //  myTopPostsMenuButton.classList.remove('is-active');
  
    if (sectionElement) {
      sectionElement.style.display = 'block';
@@ -671,6 +677,22 @@ cargarPagina("loginPage")
     var provider = new firebase.auth.FacebookAuthProvider();
     firebase.auth().signInWithPopup(provider);
   });
+
+  // signInButtonMAIL.addEventListener('click', function() {
+  //   console.log(email);
+  //   firebase.auth().signInWithEmailAndPassword(email, password)
+  //   .then((userCredential) => {
+  //     // Signed in
+  //     var user = userCredential.user;
+  //     // ...
+  //   })
+  //   .catch((error) => {
+  //     var errorCode = error.code;
+  //     var errorMessage = error.message;
+  //   });
+  // });
+
+
 
    // Bind Sign out button.
    signOutButton.addEventListener('click', function() {
@@ -701,9 +723,6 @@ cargarPagina("loginPage")
    myPostsMenuButton.onclick = function() {
      showSection(userPostsSection, myPostsMenuButton);
    };
-   myTopPostsMenuButton.onclick = function() {
-     showSection(topUserPostsSection, myTopPostsMenuButton);
-   };
    addButton.onclick = function() {
      showSection(addPost);
      messageInput.value = '';
@@ -711,60 +730,3 @@ cargarPagina("loginPage")
    };
    recentMenuButton.onclick();
  }, false);
-
-
-
-
-
- // These samples are intended for Web so this import would normally be
-// done in HTML however using modules here is more convenient for
-// ensuring sample correctness offline.
-// import firebase from "firebase/app";
-// import "firebase/auth";
-
-// function facebookProvider() {
-//   // [START auth_facebook_provider_create]
-//   var provider = new firebase.auth.FacebookAuthProvider();
-//   // [END auth_facebook_provider_create]
-
-//   // / [START auth_facebook_provider_scopes]
-//   provider.addScope('user_birthday');
-//   // [END auth_facebook_provider_scopes]
-
-//   // [START auth_facebook_provider_params]
-//   provider.setCustomParameters({
-//     'display': 'popup'
-//   });
-//   // [END auth_facebook_provider_params]
-// }
-
-// function facebookSignInPopup(provider) {
-//   // [START auth_facebook_signin_popup]
-//   firebase
-//     .auth()
-//     .signInWithPopup(provider)
-//     .then((result) => {
-//       /** @type {firebase.auth.OAuthCredential} */
-//       var credential = result.credential;
-
-//       // The signed-in user info.
-//       var user = result.user;
-
-//       // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-//       var accessToken = credential.accessToken;
-
-//       // ...
-//     })
-//     .catch((error) => {
-//       // Handle Errors here.
-//       var errorCode = error.code;
-//       var errorMessage = error.message;
-//       // The email of the user's account used.
-//       var email = error.email;
-//       // The firebase.auth.AuthCredential type that was used.
-//       var credential = error.credential;
-
-//       // ...
-//     });
-//   // [END auth_facebook_signin_popup]
-// }
