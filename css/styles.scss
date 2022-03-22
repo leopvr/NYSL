@@ -540,6 +540,11 @@ h3 {
     margin: auto;
     position: relative;
 }
+
+#showarrow{
+    cursor: pointer;
+}
+
 @media screen and (max-width: 840px) {
     .header .mdl-layout__header-row.titlebar {
         height: 56px;
@@ -611,8 +616,9 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: #033949;
     border-radius: 30px;
+    color: white;
 }
 .mdl-button{
     margin-top: -2px;
@@ -879,7 +885,47 @@ i.material-icons{
 .msggeneral{
     width: 25px;
     position: absolute;
-    margin-left: 232px;
+}
+
+.chatimg{
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2px;
+}
+
+.arrowdivnext{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.arrowdivbefore{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin-left: 10px;
+}
+
+.nextarrow{
+    width: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.beforearrow{
+    width: 40px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.gameselection{
+    padding: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border-color: transparent;
 }
 
 //////////////////////////////////////////////medias
@@ -1017,6 +1063,22 @@ i.material-icons{
         color: white;
     }
     & #sign-out-button{
-        background-color: grey;
+        background-color: rgb(53, 53, 53);
     }
+    // & .post{
+    //     color: whitesmoke;
+    //     background-color: #033949;
+    //     & .username{
+    //         color: #f8f9fa;
+    //     }
+    //     & .text{
+    //         color: #e9ecef;
+    //     }
+    //     & .mdl-textfield__input{
+    //         border-bottom: 1px solid #f8f9fa1a;
+    //     }
+    //     & .mdl-textfield__label{
+    //         color: rgb(251 251 251 / 26%);
+    //     }
+    // }
 }

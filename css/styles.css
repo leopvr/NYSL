@@ -625,6 +625,10 @@ h3 {
   position: relative;
 }
 
+#showarrow {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 840px) {
   .header .mdl-layout__header-row.titlebar {
     height: 56px;
@@ -704,8 +708,9 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: whitesmoke;
+  background-color: #033949;
   border-radius: 30px;
+  color: white;
 }
 
 .mdl-button {
@@ -1013,7 +1018,59 @@ i.material-icons {
 .msggeneral {
   width: 25px;
   position: absolute;
-  margin-left: 232px;
+}
+
+.chatimg {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 2px;
+}
+
+.arrowdivnext {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-right: 10px;
+}
+
+.arrowdivbefore {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-left: 10px;
+}
+
+.nextarrow {
+  width: 40px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.beforearrow {
+  width: 40px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.gameselection {
+  padding: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border-color: transparent;
 }
 
 @media (orientation: portrait) {
@@ -1178,6 +1235,6 @@ i.material-icons {
 }
 
 .darkmode #sign-out-button {
-  background-color: grey;
+  background-color: #353535;
 }
 /*# sourceMappingURL=styles.css.map */

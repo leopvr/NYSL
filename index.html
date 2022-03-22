@@ -73,7 +73,7 @@
                         <button id="sign-out-button"
                             class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect">
                             <!-- <i class="avatar"></i> -->
-                             Sign out
+                            Sign out
                         </button>
                         <img src="./img/darkmode_ico.svg" id="bdark" alt="darkmode_ico" class="ico2">
                     </div>
@@ -283,9 +283,6 @@
             <div class="cont-main">
                 <h1 class="titleunderline">Registration</h1>
                 <span class="grayline">_________________________________</span>
-
-
-
 
                 <form action="ShowDataNYSL.html" style="display: contents;">
                     <div class="cont-enlace-lectura">
@@ -568,7 +565,10 @@
                         <thead>
                             <tr>
                                 <td colspan="3" class="h3">SEPTEMBER</td>
-                                <img src="./img/msggeneral_ico.svg" alt="msggeneral_ico" class="msggeneral" onclick="cargarPagina('loginPage')">
+                                <div class="chatimg">
+                                    <img src="./img/msggeneral_ico.svg" alt="msggeneral_ico" class="msggeneral"
+                                    onclick="cargarPagina('loginPage')">
+                                </div>
                             </tr>
                         </thead>
                         <tbody id="tbody1">
@@ -603,6 +603,10 @@
                         <thead>
                             <tr>
                                 <td colspan="3" class="h3">OCTOBER</td>
+                                <div class="chatimg">
+                                    <img src="./img/msggeneral_ico.svg" alt="msggeneral_ico" class="msggeneral"
+                                    onclick="cargarPagina('loginPage')">
+                                </div>
                             </tr>
                         </thead>
                         <tbody id="tbody2">
@@ -1032,7 +1036,8 @@
     <div id="loginPage">
 
         <body>
-            <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+            <div class="" id="generalchat">
 
                 <!-- Header section containing logo and menu -->
                 <header class="header mdl-color-text--white">
@@ -1041,6 +1046,18 @@
                     <div class="cont-main">
                         <h1 class="titleunderline">General chat</h1>
                         <span class="grayline">_________________________________</span>
+                        <!-- <div class="arrowdivnext">
+                            <img src="./img/arrow_despuest_ico.png" alt="arrownext" class="nextarrow"
+                                onclick="showchat('gamechat')">
+                        </div> -->
+                        <select name="gameselection" id="gameselect" class="gameselection">
+                            <option selected value="general">General Chat</option>
+                        </select>
+                        <button
+                            class="mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect"
+                            id="add">
+                            <i class="material-icons">mode_edit</i>
+                        </button>
                     </div>
 
                     <!-- Navigation Bar -->
@@ -1054,11 +1071,7 @@
                                 class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
                                 <i class="material-icons">home</i> My posts
                             </div>
-                            <button
-                                class="mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect"
-                                id="add">
-                                <i class="material-icons">mode_edit</i>
-                            </button>
+
                         </div>
                     </div>
                 </header>
@@ -1118,6 +1131,8 @@
                 </main>
             </div>
 
+
+
             <!-- Import and configure the Firebase SDK -->
             <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
             <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
@@ -1134,9 +1149,6 @@
             <div class="cont-main">
                 <h1 class="titleunderline">Registration</h1>
                 <span class="grayline">_________________________________</span>
-
-
-
 
                 <form action="ShowDataNYSL.html" style="display: contents;">
                     <div class="cont-enlace-lectura">
@@ -1200,19 +1212,19 @@
 
                         </fieldset>
                         <div style="
-    display: flex;
-    justify-content: center;
-    /* padding: 15px; */
-    ">
-                            <button style="
-    padding: 5px;
-    border-radius: 30px;
-    background-color: #43d743;
-    padding-right: 10px;
-    padding-left: 10px;
-    ">
+                            display: flex;
+                            justify-content: center;
+                            /* padding: 15px; */
+                            ">
+                        <button style="
+                            padding: 5px;
+                            border-radius: 30px;
+                            background-color: #43d743;
+                            padding-right: 10px;
+                            padding-left: 10px;
+                            ">
                                 Sign Up
-                            </button>
+                        </button>
                         </div>
 
 
@@ -1227,6 +1239,73 @@
             </div>
 
         </main>
+    </div>
+    <div id="showDataNYSL">
+        <body>
+            <div class="cont-main">
+              <div class="cont-enlace">
+                <p align=center>&nbsp;</p>
+                <h1 align=center>
+                  <font size="+1">The following information has been sent as your
+                    feedback:</font>
+                </h1>
+          
+                <table class="tablesubmit" border="1" align=center width="226">
+                  <tr>
+                    <th align="center">Form Field</th>
+                    <th align="center">Field Value</th>
+                  </tr>
+              </div>
+            </div>
+          
+            <script language="javascript">
+              var args = location.search.substr(1).split('&');
+              for (var i = 0; i < args.length; ++i) {
+                var parts = args[i].split('=');
+                if (parts != null) {
+                  var field = parts[0];
+                  var value = parts[1];
+                  if (value == null) {
+                    value = "null"
+                  }
+                  else {
+                    value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+                  }
+          
+                  document.writeln('<tr><td align="center">' + field + '</td>');
+                  document.writeln('<td align="center">' + value + '</td></tr>');
+                }
+              }
+            </script>
+          
+            <noscript>
+              <tr>
+                <td>
+                  <p>You need to turn on Javascript in your browser.</p>
+          
+                  <p>In Microsoft Internet Explorer 4 or greater:</p>
+                  <ul>
+                    <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+                    <li>Click on the "Security" tab.</li>
+                    <li>Click on the "Custom Level" button. (In IE 4, select "Custom"
+                      and then click on "Settings...".)</li>
+                    <li>Under "Active scripting" make sure "Enable" is selected.</li>
+                  </ul>
+          
+                  <p>In Netscape version 4 or greater:</p>
+                  <ul>
+                    <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+                    <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+                    <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+                    <li>Click the <b>OK</b> button.</li>
+                  </ul>
+          
+                </td>
+              </tr>
+            </noscript>
+          
+            </table>
+          </body>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
