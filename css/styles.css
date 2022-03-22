@@ -21,7 +21,7 @@ body {
 .iconmenu {
   margin: 40px 50px;
   position: relative;
-  z-index: 10;
+  z-index: 10002;
 }
 
 .iconmenu2 {
@@ -50,7 +50,7 @@ body {
   left: 0;
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
-  z-index: 9;
+  z-index: 10001;
 }
 
 .contmenu ul {

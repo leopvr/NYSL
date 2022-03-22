@@ -528,7 +528,7 @@ var selec = document.getElementById('gameselect')
 
 selec.addEventListener("change",()=>{
   startDatabaseQueries();
-  console.log(selec)
+  // console.log(selec)
 })
 
 function startDatabaseQueries() {
@@ -633,6 +633,7 @@ function onAuthStateChanged(user) {
   if (user) {
     currentUID = user.uid;
     splashPage.style.display = 'none';
+    signOutButton.style.display = "block";
     writeUserData(user.uid, user.displayName, user.email, user.photoURL);
     startDatabaseQueries();
   } else {
@@ -640,9 +641,15 @@ function onAuthStateChanged(user) {
     currentUID = null;
     // Display the splash page where you can sign-in.
     splashPage.style.display = '';
+    signOutButton.style.display = "none";
+    
   }
 }
 
+
+// if (splashPage.style.display = 'none'){
+
+// }
 /**
  * Creates a new post for the current user.
  */
@@ -689,20 +696,6 @@ window.addEventListener('load', function () {
     firebase.auth().signInWithPopup(provider);
   });
 
-  // signInButtonMAIL.addEventListener('click', function() {
-  //   console.log(email);
-  //   firebase.auth().signInWithEmailAndPassword(email, password)
-  //   .then((userCredential) => {
-  //     // Signed in
-  //     var user = userCredential.user;
-  //     // ...
-  //   })
-  //   .catch((error) => {
-  //     var errorCode = error.code;
-  //     var errorMessage = error.message;
-  //   });
-  // });
-
 
 
   // Bind Sign out button.
@@ -742,6 +735,25 @@ window.addEventListener('load', function () {
   recentMenuButton.onclick();
 }, false);
 
+// console.log(document.getElementById('usernameNYSL').value)
+
+function signUpWithEmailPassword() {
+  var email = document.getElementById('usernameNYSL').value;
+  var password = document.getElementById('passwordNYSL').value;
+  // [START auth_signup_password]
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      // Signed in 
+      var user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ..
+    });
+  // [END auth_signup_password]
+}
 
 var gamesID = document.querySelector('gameselection')
 

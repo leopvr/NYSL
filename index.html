@@ -84,57 +84,6 @@
 
     <div id="homePage">
         <main>
-
-            <section id="page-splash">
-                <div class="popUpSig">
-                    <img src="./img/nysl_logo.png" alt="nysl_logo" width="130px">
-                    <h2 class="h2Sign">Sign In</h2>
-
-                    <div class="regist">
-                        <label for="usernameNYSL" style="color: rgb(0, 0, 0);">Username</label>
-                        <br>
-                        <input type="text" id="usernameNYSL">
-                    </div>
-
-                    <div class="regist">
-                        <label for="passwordNYSL" style="color: rgb(0, 0, 0);">Password</label>
-                        <br>
-                        <input type="password" id="passwordNYSL" class="registBox">
-                    </div>
-
-                    <div>
-                        <button type="submit" id="sign-in-button-MAIL"
-                            class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect">
-                            Log In
-                        </button>
-                    </div>
-
-                    <div class="logInAlt">
-
-                        <div>
-                            <button id="sign-in-button">
-                                <img src="./img/icons8-logo-de-google.svg" alt="googleLogo" width="35">
-                            </button>
-                        </div>
-
-                        <span class="separador">
-                            |
-                        </span>
-
-                        <div>
-                            <button id="sign-in-button-FB">
-                                <img src="./img/icons8-facebook-nuevo.svg" alt="faceLogo" width="35">
-                            </button>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <a href="#" class="notSign" onclick="cargarPagina('regiuserPage')">Not a User? Sign Up</a>
-                    </div>
-                </div>
-            </section>
-
             <div class="cont-main">
                 <h1 class="titleunderline">Upcoming Events</h1>
                 <span class="grayline">_________________________________</span>
@@ -1037,6 +986,56 @@
 
         <body>
 
+            <section id="page-splash">
+                <div class="popUpSig">
+                    <img src="./img/nysl_logo.png" alt="nysl_logo" width="130px">
+                    <h2 class="h2Sign">Sign In</h2>
+
+                    <div class="regist">
+                        <label for="usernameNYSL" style="color: rgb(0, 0, 0);">Username</label>
+                        <br>
+                        <input type="text" id="usernameNYSL">
+                    </div>
+
+                    <div class="regist">
+                        <label for="passwordNYSL" style="color: rgb(0, 0, 0);">Password</label>
+                        <br>
+                        <input type="password" id="passwordNYSL" class="registBox">
+                    </div>
+
+                    <div>
+                        <button type="submit" id="sign-in-button-MAIL" onclick="signUpWithEmailPassword()"
+                            class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect">
+                            Log In
+                        </button>
+                    </div>
+
+                    <div class="logInAlt">
+
+                        <div>
+                            <button id="sign-in-button">
+                                <img src="./img/icons8-logo-de-google.svg" alt="googleLogo" width="35">
+                            </button>
+                        </div>
+
+                        <span class="separador">
+                            |
+                        </span>
+
+                        <div>
+                            <button id="sign-in-button-FB">
+                                <img src="./img/icons8-facebook-nuevo.svg" alt="faceLogo" width="35">
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <a href="#" class="notSign" onclick="cargarPagina('regiuserPage')">Not a User? Sign Up</a>
+                    </div>
+                </div>
+            </section>
+            
             <div class="" id="generalchat">
 
                 <!-- Header section containing logo and menu -->
